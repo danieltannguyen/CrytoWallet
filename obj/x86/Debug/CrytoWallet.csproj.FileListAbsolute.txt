@@ -1,0 +1,10 @@
+C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\CrytoWallet.csprojAssemblyReference.cache
+C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\CrytoWallet.Properties.Resources.resources
+C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\CrytoWallet.csproj.GenerateResource.cache
+C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\CrytoWallet.frmMain.resources
+C:\Users\Family\source\repos\CrytoWallet\bin\Debug\WindowsApplication.exe
+C:\Users\Family\source\repos\CrytoWallet\bin\Debug\WindowsApplication.pdb
+C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\WindowsApplication.exe
+C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\WindowsApplication.pdb
+C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\CrytoWallet.frmLogin.resources
+C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\CrytoWallet.frmSignup.resources
