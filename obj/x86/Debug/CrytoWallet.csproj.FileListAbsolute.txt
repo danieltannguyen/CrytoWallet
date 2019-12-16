@@ -8,3 +8,6 @@ C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\WindowsApplication.exe
 C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\WindowsApplication.pdb
 C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\CrytoWallet.frmLogin.resources
 C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\CrytoWallet.frmSignup.resources
+C:\Users\Family\source\repos\CrytoWallet\bin\Debug\Database.mdf
+C:\Users\Family\source\repos\CrytoWallet\bin\Debug\Database_log.ldf
+C:\Users\Family\source\repos\CrytoWallet\bin\Debug\WindowsApplication.exe.config

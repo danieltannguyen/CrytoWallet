@@ -22,5 +22,10 @@ namespace CrytoWallet
             signup.ShowDialog();
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

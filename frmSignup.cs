@@ -20,5 +20,13 @@ namespace CrytoWallet
         {
 
         }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            if(txtPassword == txtConformationPassword)
+            {
+
+            }
+        }
     }
 }
