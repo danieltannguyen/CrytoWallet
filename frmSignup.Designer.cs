@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignup));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.txtConformationPassword = new System.Windows.Forms.TextBox();
@@ -38,10 +39,13 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtPassRestriction = new System.Windows.Forms.RichTextBox();
+            this.txtConfirmPassError = new System.Windows.Forms.Label();
+            this.txtPasswordError = new System.Windows.Forms.Label();
+            this.textEmailError = new System.Windows.Forms.Label();
+            this.txtUserError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,6 +53,10 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.txtUserError);
+            this.panel1.Controls.Add(this.textEmailError);
+            this.panel1.Controls.Add(this.txtPasswordError);
+            this.panel1.Controls.Add(this.txtConfirmPassError);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtConformationPassword);
             this.panel1.Controls.Add(this.label1);
@@ -137,16 +145,6 @@
             this.txtEmail.Size = new System.Drawing.Size(128, 20);
             this.txtEmail.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CrytoWallet.Properties.Resources.passRequirement;
-            this.pictureBox1.Location = new System.Drawing.Point(393, 98);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(350, 268);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -157,21 +155,77 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Create a New Account !";
             // 
+            // txtPassRestriction
+            // 
+            this.txtPassRestriction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassRestriction.Location = new System.Drawing.Point(393, 98);
+            this.txtPassRestriction.Name = "txtPassRestriction";
+            this.txtPassRestriction.Size = new System.Drawing.Size(395, 268);
+            this.txtPassRestriction.TabIndex = 7;
+            this.txtPassRestriction.Text = resources.GetString("txtPassRestriction.Text");
+            // 
+            // txtConfirmPassError
+            // 
+            this.txtConfirmPassError.AutoSize = true;
+            this.txtConfirmPassError.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPassError.ForeColor = System.Drawing.Color.Red;
+            this.txtConfirmPassError.Location = new System.Drawing.Point(138, 202);
+            this.txtConfirmPassError.Name = "txtConfirmPassError";
+            this.txtConfirmPassError.Size = new System.Drawing.Size(107, 9);
+            this.txtConfirmPassError.TabIndex = 12;
+            this.txtConfirmPassError.Text = "Your password doesn\'t match.";
+            this.txtConfirmPassError.Visible = false;
+            // 
+            // txtPasswordError
+            // 
+            this.txtPasswordError.AutoSize = true;
+            this.txtPasswordError.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordError.ForeColor = System.Drawing.Color.Red;
+            this.txtPasswordError.Location = new System.Drawing.Point(139, 158);
+            this.txtPasswordError.Name = "txtPasswordError";
+            this.txtPasswordError.Size = new System.Drawing.Size(97, 9);
+            this.txtPasswordError.TabIndex = 13;
+            this.txtPasswordError.Text = "Your password is too short.";
+            this.txtPasswordError.Visible = false;
+            // 
+            // textEmailError
+            // 
+            this.textEmailError.AutoSize = true;
+            this.textEmailError.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEmailError.ForeColor = System.Drawing.Color.Red;
+            this.textEmailError.Location = new System.Drawing.Point(139, 108);
+            this.textEmailError.Name = "textEmailError";
+            this.textEmailError.Size = new System.Drawing.Size(82, 9);
+            this.textEmailError.TabIndex = 14;
+            this.textEmailError.Text = "Your email is not valid.";
+            this.textEmailError.Visible = false;
+            // 
+            // txtUserError
+            // 
+            this.txtUserError.AutoSize = true;
+            this.txtUserError.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserError.ForeColor = System.Drawing.Color.Red;
+            this.txtUserError.Location = new System.Drawing.Point(138, 55);
+            this.txtUserError.Name = "txtUserError";
+            this.txtUserError.Size = new System.Drawing.Size(87, 9);
+            this.txtUserError.TabIndex = 15;
+            this.txtUserError.Text = "Your username is taken.";
+            this.txtUserError.Visible = false;
+            // 
             // frmSignup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtPassRestriction);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Name = "frmSignup";
             this.Text = "Sign up";
             this.Load += new System.EventHandler(this.frmSignup_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,7 +243,11 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox txtPassRestriction;
+        private System.Windows.Forms.Label txtUserError;
+        private System.Windows.Forms.Label textEmailError;
+        private System.Windows.Forms.Label txtPasswordError;
+        private System.Windows.Forms.Label txtConfirmPassError;
     }
 }

@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="txtPassRestriction.Text" xml:space="preserve">
+    <value>Your password: 
+	+ Must be at least 8 characters long.
+	+ Must include at least one letter with uppercase
+	+ Must include at leat one number
+	+ Must include one special character from the following: 
+                + #?!@$%^&amp;*-
+	+ Must not match your User ID
+	</value>
+  </data>
 </root>
