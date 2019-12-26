@@ -8,7 +8,6 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
 namespace CrytoWallet
 {
     public partial class frmSignup : Form
@@ -16,6 +15,7 @@ namespace CrytoWallet
         public frmSignup()
         {
             InitializeComponent();
+            RemoteConnection remoteConn = new RemoteConnection();
         }
 
         private void frmSignup_Load(object sender, EventArgs e)
