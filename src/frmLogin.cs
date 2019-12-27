@@ -13,31 +13,36 @@ namespace CrytoWallet
 {
     public partial class frmLogin : Form
     {
-        static string connString = ConfigurationManager.ConnectionStrings["CrytoWalletDatabaseSQL"].ConnectionString;
+        static string connString = ConfigurationManager.ConnectionStrings["CrytoWallet.Properties.Settings.CrytoWalletDatabaseSQL"].ConnectionString;
+      
         public frmLogin()
         {
             InitializeComponent();
-
+            password.UseSystemPasswordChar = true;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmSignup signup = new frmSignup();
+            this.Hide();
+             frmSignup signup = new frmSignup();
             signup.ShowDialog();
-
+            this.Close();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-            string query = "SELECT * FROM Account WHERE txtUsername.Text = @Username AND txtPassword.Text = @Password";
-            SqlDataAdapter sda = new SqlDataAdapter(query, connString);
-            DataTable dataTable = new DataTable();
-            sda.Fill(dataTable);
-            if (dataTable.Rows.Count == 1)
+
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT Username FROM Account WHERE Username ='"+username.Text+"' AND Password='"+password.Text+"'", connString);
+
+            DataSet ds = new DataSet();          
+            sda.Fill(ds);
+            DataTable dataTable = ds.Tables[0];
+            if (dataTable.Rows.Count >= 1)
             {
                 frmMain frmMain = new frmMain();
-                frmMain.Show();
+                this.Hide();
+                frmMain.ShowDialog();
+                this.Close();
             }
             else
             {

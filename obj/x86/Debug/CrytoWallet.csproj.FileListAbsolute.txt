@@ -11,3 +11,4 @@ C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\CrytoWallet.frmSignup.res
 C:\Users\Family\source\repos\CrytoWallet\bin\Debug\Database.mdf
 C:\Users\Family\source\repos\CrytoWallet\bin\Debug\Database_log.ldf
 C:\Users\Family\source\repos\CrytoWallet\bin\Debug\WindowsApplication.exe.config
+C:\Users\Family\source\repos\CrytoWallet\obj\x86\Debug\CrytoWallet.dataset.resources

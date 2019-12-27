@@ -135,7 +135,7 @@
             this.txtConformationPassword.Location = new System.Drawing.Point(141, 179);
             this.txtConformationPassword.Name = "txtConformationPassword";
             this.txtConformationPassword.Size = new System.Drawing.Size(128, 20);
-            this.txtConformationPassword.TabIndex = 10;
+            this.txtConformationPassword.TabIndex = 3;
             // 
             // label1
             // 
@@ -153,7 +153,7 @@
             this.txtPassword.Location = new System.Drawing.Point(141, 135);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(128, 20);
-            this.txtPassword.TabIndex = 8;
+            this.txtPassword.TabIndex = 2;
             // 
             // label3
             // 
@@ -186,7 +186,7 @@
             this.btnCreate.Location = new System.Drawing.Point(168, 225);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
-            this.btnCreate.TabIndex = 3;
+            this.btnCreate.TabIndex = 4;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
@@ -222,7 +222,7 @@
             this.txtPassRestriction.Location = new System.Drawing.Point(393, 98);
             this.txtPassRestriction.Name = "txtPassRestriction";
             this.txtPassRestriction.Size = new System.Drawing.Size(395, 268);
-            this.txtPassRestriction.TabIndex = 7;
+            this.txtPassRestriction.TabIndex = 5;
             this.txtPassRestriction.Text = resources.GetString("txtPassRestriction.Text");
             // 
             // frmSignup

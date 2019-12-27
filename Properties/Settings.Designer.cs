@@ -27,22 +27,10 @@ namespace CrytoWallet.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;" +
-            "Integrated Security=True")]
-        public string DatabaseConnectionString {
+            "Integrated Security=True;Connect Timeout=30")]
+        public string CrytoWalletDatabaseSQL {
             get {
-                return ((string)(this["DatabaseConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=C:\\USERS\\FAMILY\\SOURCE\\REPOS\\C" +
-            "RYTOWALLET\\DATABASE.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=Fals" +
-            "e;TrustServerCertificate=False")]
-        public string C__USERS_FAMILY_SOURCE_REPOS_CRYTOWALLET_DATABASE_MDFConnectionString {
-            get {
-                return ((string)(this["C__USERS_FAMILY_SOURCE_REPOS_CRYTOWALLET_DATABASE_MDFConnectionString"]));
+                return ((string)(this["CrytoWalletDatabaseSQL"]));
             }
         }
     }

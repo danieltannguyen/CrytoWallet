@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Configuration;
 using System.Text.RegularExpressions;
 namespace CrytoWallet
 {
     public partial class frmSignup : Form
     {
+        static string connString = ConfigurationManager.ConnectionStrings["CrytoWallet.Properties.Settings.CrytoWalletDatabaseSQL"].ConnectionString;
         public frmSignup()
         {
             InitializeComponent();
@@ -20,7 +22,8 @@ namespace CrytoWallet
 
         private void frmSignup_Load(object sender, EventArgs e)
         {
-
+            txtConformationPassword.UseSystemPasswordChar = true;
+            txtPassword.UseSystemPasswordChar = true;
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -57,23 +60,23 @@ namespace CrytoWallet
             if (flag == true)
             {
                 //add user account
-                string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = C:\USERS\FAMILY\SOURCE\REPOS\CRYTOWALLET\DATABASE.MDF;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
-                using (SqlConnection sqlconn = new SqlConnection(connectionString))
+                using (SqlConnection sqlconn = new SqlConnection(connString))
                 {
                     sqlconn.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Account WHERE txtUsername.Text = @Username AND txtPassword.Text = @Password", sqlconn);
-                    cmd.Parameters.AddWithValue("@Username", txtUsername.Text);
-                    cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
-                    cmd.Parameters.AddWithValue("@Email", txtPassword.Text);
-                   
-                    int reuslt = (int)cmd.ExecuteScalar();
-                   
-                    if (reuslt > 0)
-                    {
+                    SqlCommand SqlComd = new SqlCommand("UserAdd", sqlconn);
+                    SqlComd.CommandType = CommandType.StoredProcedure;
+                    SqlComd.Parameters.AddWithValue("@Username", txtUsername.Text);
+                    SqlComd.Parameters.AddWithValue("@Password", txtPassword.Text);
+                    SqlComd.Parameters.AddWithValue("@Email", txtPassword.Text);
+                    try{
+                        SqlComd.ExecuteNonQuery();
                         MessageBox.Show(string.Format("{0}, your register is successfully!", txtUsername.Text));
+                        this.Hide();
+                        frmLogin frmLogin = new frmLogin();
+                        frmLogin.ShowDialog();
+                        this.Close();
                     }
-                    else
+                    catch(Exception)
                     {
                         MessageBox.Show("Login connection failed!");
                     }
